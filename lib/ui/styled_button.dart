@@ -1,3 +1,4 @@
+import 'package:dart_oop/caixa.dart';
 import 'package:flutter/material.dart';
 
 class StyledButton extends StatelessWidget {
@@ -5,6 +6,17 @@ class StyledButton extends StatelessWidget {
   final void Function() handler;
 
   const StyledButton(this.text, {required this.handler, super.key});
+
+  StyledButton.action(String text, void Function() action, {super.key})
+      : text = Text(
+          text,
+          style: TextStyle(
+            color: colorSchema.fontCTA,
+            fontFamily: 'Inter',
+            fontSize: 20,
+          ),
+        ),
+        handler = action;
 
   @override
   Widget build(context) {

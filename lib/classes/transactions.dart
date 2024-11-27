@@ -1,11 +1,10 @@
-import 'package:dart_oop/classes/customer.dart';
-
 class Transactions {
-  Transactions(
-      {required this.origin, required this.destination, required this.value});
+  Transactions(this.type,
+      {required this.origin, this.destination = '', required this.value});
 
-  Customer origin;
-  Customer destination;
+  String type;
+  String origin;
+  String destination;
   double value;
   DateTime time = DateTime.now();
 }

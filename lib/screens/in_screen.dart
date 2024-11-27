@@ -1,16 +1,16 @@
-import 'package:dart_oop/classes/customer.dart';
+import 'package:dart_oop/caixa.dart';
 import 'package:dart_oop/ui/customer_info.dart';
 import 'package:flutter/material.dart';
 
 class InScreen extends StatelessWidget {
-  final void Function(Widget) handler;
-  final List<Customer> customers;
+  final void Function(Widget)? handler;
 
-  const InScreen({required this.handler, required this.customers, super.key});
+  const InScreen({required this.handler, super.key});
 
   @override
   Widget build(context) {
     return ListView.builder(
+      padding: const EdgeInsets.only(top: 250),
       itemCount: customers.length,
       itemBuilder: (context, index) {
         return ListTile(
@@ -20,3 +20,4 @@ class InScreen extends StatelessWidget {
     );
   }
 }
+//002.017.032

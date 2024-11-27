@@ -7,13 +7,13 @@ import 'package:dart_oop/caixa.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function(Widget) handler;
-  final List<Customer> customers;
 
-  const StartScreen(
-      {required this.handler, required this.customers, super.key});
+  const StartScreen({required this.handler, super.key});
 
   void switchToCreate() {
-    handler(InScreen(handler: handler, customers: customers));
+    handler(InScreen(
+      handler: handler,
+    ));
   }
 
   @override

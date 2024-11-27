@@ -18,14 +18,14 @@ final Customer thiago = Customer(name: 'Thiago');
 final Customer joaoMarcelo = Customer(name: 'João Marcelo');
 final Customer samuel = Customer(name: 'Samuel');
 
+List<Customer> customers = [gaita, thiago, joaoMarcelo, samuel];
+
 class _CaixaState extends State<Caixa> {
   Widget? activeScreen;
 
-  List<Customer> customers = [gaita, thiago, joaoMarcelo, samuel];
-
   @override
   void initState() {
-    activeScreen = StartScreen(handler: switchScreen, customers: customers);
+    activeScreen = StartScreen(handler: switchScreen);
     for (int i = 0; i < customers.length; i++) {
       customers[i].switchScreen = switchScreen;
     }
@@ -57,3 +57,4 @@ class _CaixaState extends State<Caixa> {
     );
   }
 }
+//026.032.048
